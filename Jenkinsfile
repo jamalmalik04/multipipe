@@ -8,4 +8,11 @@ node('master')
 	{
     sh label: '', script: 'mvn package'
 	}
+    stage('contunus deployment')
+        {
+    sh 'scp /home/ubuntu/.jenkins/workspace/pipelinejob1/webapp/target/webapp.war ubuntu@172.31.19.244:/var/lib/tomcat8/webapps/qainstance.war' 
+        }
 }
+
+
+
