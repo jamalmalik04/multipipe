@@ -12,6 +12,14 @@ node('master')
         {
     sh 'scp /home/ubuntu/.jenkins/workspace/pipelinejob1/webapp/target/webapp.war ubuntu@172.31.19.244:/var/lib/tomcat8/webapps/qamulti.war' 
         }
+   stage('continues testing')
+        {
+   sh 'echo "testing passed"'
+        }
+   stage('contunus delivery')
+        {
+   sh 'scp /home/ubuntu/.jenkins/workspace/pipelinejob1/webapp/target/webapp.war ubuntu@172.31.25.1:/var/lib/tomcat8/webapps/prodinstance.war' 
+        }
 }
 
 
