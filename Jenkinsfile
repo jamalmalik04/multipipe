@@ -18,7 +18,7 @@ node('master')
         }
    stage('contunus delivery')
         {
-   sh 'scp /home/ubuntu/.jenkins/workspace/pipelinejob1/webapp/target/webapp.war ubuntu@172.31.25.1:/var/lib/tomcat8/webapps/prodinstance.war' 
+   sh 'scp /home/ubuntu/.jenkins/workspace/pipelinejob1/webapp/target/webapp.war ubuntu@172.31.25.1:/var/lib/tomcat8/webapps/prodmulti.war' 
         }
 }
 
